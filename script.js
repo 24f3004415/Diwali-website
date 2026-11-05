@@ -1,5 +1,5 @@
 /* ===== EDIT THIS PART ===== */
-const CONFIG = { her: "My Love", me: "Yours, always", photoCount: 79, videoCount: 2 }; // photos: 01.jpeg ... 79.jpeg, videos: v1.mp4, v2.mp4 (all in /images)
+const CONFIG = { her: "My Love", me: "Yours, always", photoCount: 79, videoCount: 2 }; // photos: 01.jpeg ... 79.jpeg, videos: v1.mp4, v2.mp4 (all in /Images)
 
 // img = photo number from your images folder. Change dates, titles and text!
 const memories = [
@@ -37,7 +37,7 @@ Your Mohit ❤️`;
 
 const $ = s => document.querySelector(s);
 const pad = n => String(n).padStart(2, "0");
-const src = n => `images/${pad(n)}.jpeg`;
+const src = n => `Images/${pad(n)}.jpeg`;
 $("#herName").textContent = CONFIG.her;
 $("#sign").textContent = CONFIG.me;
 
@@ -50,7 +50,7 @@ $("#grid").innerHTML = Array.from({ length: CONFIG.photoCount }, (_, i) => `<img
 
 // Videos
 $("#vids").innerHTML = Array.from({ length: CONFIG.videoCount }, (_, i) =>
-    `<video controls playsinline preload="metadata" src="images/v${i + 1}.mp4"></video>`).join("");
+    `<video controls playsinline preload="metadata" src="Images/v${i + 1}.mp4"></video>`).join("");
 document.querySelectorAll("#vids video").forEach(v => v.addEventListener("play", () => $("#bgm").pause()));
 
 // Reveal on scroll
